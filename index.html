@@ -167,22 +167,33 @@
         }
 
         // Đảm bảo gửi đúng field 'input_text' như định nghĩa trong QueryRequest của backend
-            async function sendMessage() {
-                const userInput = document.getElementById('user-input').value;
-                try {
-                    const response = await fetch('http://localhost:8000/api/generate-color', { // Đảm bảo URL chính xác
-                        method: 'POST',
-                        headers: {
-                            'Content-Type': 'application/json',
-                        },
-                        body: JSON.stringify({ input_text: userInput }), // Đúng định dạng yêu cầu
-                    });
-                    const data = await response.json();
-                    document.getElementById('chat-messages').innerHTML += `<div class="text-left"><b>AI: </b>${data.result}</div>`;
-                } catch (error) {
-                    console.error('Error:', error);
-                }
+        async function sendMessage() {
+            const userInput = document.getElementById('user-input');
+            const userMessage = userInput.value;
+            const chatMessages = document.getElementById('chat-messages');
+
+            // Add user's message to chat
+            chatMessages.innerHTML += `<div class="text-right"><b>You: </b>${userMessage}</div>`;
+            userInput.value = '';
+
+            // Send user message to API
+            try {
+                const response = await fetch('http://localhost:8000/api/generate-color', { // Cập nhật endpoint phù hợp
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify({ input_text: userMessage }), // Đúng format backend yêu cầu
+                });
+                const data = await response.json();
+
+                // Display the chatbot response
+                chatMessages.innerHTML += `<div class="text-left"><b>AI: </b>${data.result}</div>`;
+                chatMessages.scrollTop = chatMessages.scrollHeight;
+            } catch (error) {
+                chatMessages.innerHTML += `<div class="text-left text-red-500">Error: ${error.message}</div>`;
             }
+}
 
 
     </script>

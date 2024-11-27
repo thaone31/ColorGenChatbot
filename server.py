@@ -16,7 +16,7 @@ app.add_middleware(
 
 
 # Load model của bạn
-model = pipeline('text-generation', model='brown1808/vinallama-2.7b-custom-ver-5-epochs')
+model = pipeline('text-generation', model='Eiramai/vinallama-2b-custom-color-v2')
 
 # Định nghĩa API request/response
 class QueryRequest(BaseModel):
@@ -30,14 +30,4 @@ async def generate_color(request: QueryRequest):
     except Exception as e:
         raise HTTPException(status_code=500, detail=str(e))
 
-
-
-# @app.post("/api/generate-color")
-# async def generate_color(request: QueryRequest):
-#     try:
-#         # Sử dụng model để trả về kết quả
-#         result = model(request.input_text, max_length=100, truncation=True, num_return_sequences=1)
-#         return {"result": result[0]["generated_text"]}
-#     except Exception as e:
-#         raise HTTPException(status_code=500, detail=str(e))
 

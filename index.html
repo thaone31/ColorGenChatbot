@@ -20,50 +20,85 @@
                 <img src="./assets/logo.png" alt="PaletteDes" class="block max-w-[15rem]" />
             </div>
             <ul class="hidden md:flex space-x-6">
-                <li><a href="#about" class="hover:text-pink-500 text-2xl">Home</a></li>
-                <li><a href="#mission" class="hover:text-pink-500 text-2xl">Blog</a></li>
-                <li><a href="#my-story" class="hover:text-pink-500 text-2xl">Explore</a></li>
-                <li><a href="#my-story" class="hover:text-pink-500 text-2xl">Contact</a></li>
+                <li><a href="#about" class="hover:text-blue-500 text-2xl">Home</a></li>
+                <li><a href="#all_blog" class="hover:text-blue-500 text-2xl">Blog</a></li>
+                <li><a href="explore.html" class="hover:text-blue-500 text-2xl">Explore</a></li>
+                <li><a href="#contact" class="hover:text-blue-500 text-2xl">Contact</a></li>
             </ul>
             <div>
-                <a href="" target="_blank" class="inline-block">
-                    <button class="bg-transparent border-[2px] border-blue-500 text-black-400 px-4 py-2 rounded-2xl transition ease-in-out duration-300 hover:bg-pink-500 hover:text-white transform hover:scale-105">
+                <a href="#" target="_blank" class="inline-block">
+                    <button class="bg-transparent border-[2px] border-blue-500 text-black-400 px-4 py-2 rounded-2xl transition ease-in-out duration-300 hover:bg-blue-600 hover:text-white transform hover:scale-105">
                         Sign In
                     </button>
                 </a>
-
-                <a href="" target="_blank" class="inline-block">
-                    <button class="bg-transparent border-[2px] border-blue-500 text-black-400 px-4 py-2 rounded-2xl transition ease-in-out duration-300 hover:bg-pink-500 hover:text-white transform hover:scale-105">
+        
+                <a href="#" target="_blank" class="inline-block">
+                    <button class="bg-transparent border-[2px] border-blue-500 text-black-400 px-4 py-2 rounded-2xl transition ease-in-out duration-300 hover:bg-blue-600 hover:text-white transform hover:scale-105">
                         Sign Up
                     </button>
                 </a>
             </div>
         </section>
-        <br><br><br>
+        
+        
 
-        <section class="text-[5rem] text-center uppercase font-medium" style="background: linear-gradient(90deg, rgba(255, 28, 247, 1), rgba(0, 240, 255, 1)); -webkit-background-clip: text; color: transparent;">
+        <section id="about" class="text-[4rem] text-center uppercase font-medium" style="background: linear-gradient(90deg, rgba(255, 28, 247, 1), rgba(0, 240, 255, 1)); -webkit-background-clip: text; color: transparent;">
             Welcome to
             <br /> AI color palette generator
         </section>
         <br><br>
 
-        <section class="flex min-h-[25rem] py-10">
-            <div class="w-[50%]">
-                <img src="./assets/AI_color.png" alt="AI Color Palette" class="w-full h-auto rounded-lg shadow-md" />
+        <section class="flex min-h-[25rem] py-2 items-center">
+            
+            <!-- Hình ảnh -->
+            <div class="w-[50%] flex justify-center">
+                <img src="./assets/AI_color.png" alt="" class="max-w-[80%] h-auto" />
             </div>
-            <div class="w-[50%] h-full flex flex-col justify-center items-center text-center">
-                <div class="space-y-5">
-                    <h2 class="text-2xl font-bold text-gray-800">Create harmonious color</h2>
-                    <h2 class="text-2xl font-bold text-gray-800">schemes effortlessly with the</h2>
-                    <h2 class="text-2xl font-bold text-gray-800">AI Color Palette Generator to</h2>
-                    <h2 class="text-2xl font-bold text-gray-800">enhance your designs.</h2>
+            <!-- Nội dung -->
+            <div class="w-[50%] h-full flex flex-col justify-center items-center">
+                <div class="h-full flex flex-col items-center">
+                    <nav class="py-1 font-bold text-lg">Create harmonious color</nav>
+                    <nav class="py-1 font-bold text-lg">schemes effortlessly with the</nav>
+                    <nav class="py-1 font-bold text-lg">AI Color Palette Generator to</nav>
+                    <nav class="py-1 font-bold text-lg">enhance your designs.</nav>
                 </div>
                 <br><br>
-                <button onclick="showChatbot()" class="text-white py-[10px] px-10 rounded-lg flex items-center transition duration-300 ease-in-out transform hover:scale-105" style="background: linear-gradient(90deg, rgba(68, 103, 255, 1), rgba(114, 65, 255, 1));">
-                    <img src="./assets/icon_chatbot.png" alt="Icon" class="w-6 h-6 mr-2"> 
-                    Start with chatbot
-                </button>
+             
+                    <button onclick="showChatbot()" class="text-white py-[10px] px-10 rounded-lg flex items-center transition duration-300 ease-in-out transform hover:scale-105" style="background: linear-gradient(90deg, rgba(68, 103, 255, 1), rgba(114, 65, 255, 1));">
+                        <img src="./assets/icon_chatbot.png" alt="Icon" class="w-6 h-6 mr-2"> 
+                        Start with chatbot
+                    </button>
+            
                 
+                <style>
+                /* Nút nổi bật */
+                .chatbot-button {
+                    background: linear-gradient(90deg, rgba(68, 103, 255, 1), rgba(114, 65, 255, 1));
+                    box-shadow: 0 4px 15px rgba(114, 65, 255, 0.6);
+                    transition: all 0.3s ease-in-out;
+                    font-size: 1.25rem; /* Tăng kích thước chữ */
+                    font-weight: bold;
+                    border: 2px solid transparent;
+                }
+                
+                /* Hiệu ứng hover */
+                .chatbot-button:hover {
+                    background: linear-gradient(90deg, rgba(114, 65, 255, 1), rgba(68, 103, 255, 1));
+                    box-shadow: 0 6px 20px rgba(114, 65, 255, 0.8);
+                    transform: scale(1.05); /* Phóng to nhẹ */
+                    border-color: rgba(255, 255, 255, 0.8); /* Thêm viền trắng */
+                }
+                
+                /* Biểu tượng to hơn khi hover */
+                .chatbot-button img {
+                    transition: transform 0.3s ease-in-out;
+                }
+                
+                .chatbot-button:hover img {
+                    transform: scale(1.2); /* Phóng to biểu tượng */
+                }
+                </style>
+
                 <section id="chatbot-container" class="hidden mt-10 w-full max-w-2xl mx-auto">
                     <div class="bg-gray-100 p-4 rounded-lg shadow-md">
                         <h2 class="text-xl font-bold text-center text-gray-800 mb-4">Chatbot</h2>
@@ -76,127 +111,397 @@
                         </div>
                     </div>
                 </section>
+                
             </div>
         </section>
+        <br><br>
+        <section id="all_blog" class="flex flex-wrap min-h-[25rem] py-10">
+            <!-- Phần danh sách chủ đề -->
+            <div class="w-full mb-5">
+                <h1 class="text-3xl font-bold mb-3 text-center">Blog Posts by Category</h1>
+                <div class="flex justify-center space-x-4">
+                    <button 
+                        class="category-btn bg-transparent border-[2px] border-blue-500 text-blue-500 px-4 py-2 rounded-2xl transition ease-in-out duration-300 hover:bg-blue-600 hover:text-white transform hover:scale-105"
+                        onclick="filterPosts('technology')"
+                    >
+                        Technology
+                    </button>
+                    <button 
+                        class="category-btn bg-transparent border-[2px] border-blue-500 text-blue-500 px-4 py-2 rounded-2xl transition ease-in-out duration-300 hover:bg-blue-600 hover:text-white transform hover:scale-105"
+                        onclick="filterPosts('design')"
+                    >
+                        Design
+                    </button>
+                    <button 
+                        class="category-btn bg-transparent border-[2px] border-blue-500 text-blue-500 px-4 py-2 rounded-2xl transition ease-in-out duration-300 hover:bg-blue-600 hover:text-white transform hover:scale-105"
+                        onclick="filterPosts('fashion')"
+                    >
+                        Fashion
+                    </button>
+                    <button 
+                        class="category-btn bg-transparent border-[2px] border-blue-500 text-blue-500 px-4 py-2 rounded-2xl transition ease-in-out duration-300 hover:bg-blue-600 hover:text-white transform hover:scale-105"
+                        onclick="filterPosts('food')"
+                    >
+                        Food
+                    </button>
+                    <button 
+                        class="category-btn bg-transparent border-[2px] border-blue-500 text-blue-500 px-4 py-2 rounded-2xl transition ease-in-out duration-300 hover:bg-blue-600 hover:text-white transform hover:scale-105"
+                        onclick="filterPosts('health')"
+                    >
+                        Health
+                    </button>
+                </div>
+            </div>
         
-        <br><br><br>
-
-        <section class="flex min-h-[25rem] py-10">
-            <div class="w-1/2 pr-5 h-full flex flex-col justify-center">
-                <h1 class="text-3xl font-bold mb-5">All Posts</h1>
-                <div class="flex flex-col justify-center">
-                    <div class="flex w-full pt-5">
-                        <div>
-                            <img src="https://placehold.co/300x200" alt="">
-                        </div>
-                        <div class="p-3">
-                            <nav class="text-blue-600">Start Up</nav>
-                            <p class="font-bold">
-                                Design tips for designers that cover everything you need.
-                            </p>
-                        </div>
-                    </div>
-                    <div class="flex w-full pt-5">
-                        <div>
-                            <img src="https://placehold.co/300x200" alt="">
-                        </div>
-                        <div class="p-3">
-                            <nav class="text-blue-600">Start Up</nav>
-                            <p class="font-bold">
-                                Design tips for designers that cover everything you need.
-                            </p>
+        
+            <!-- Phần bài viết -->
+            <div class="w-full">
+                <!-- Chủ đề: Technology -->
+                <div id="technology" class="post-category hidden">
+                    <h2 class="text-2xl font-semibold mb-4 border-b-2 border-blue-600">Technology</h2>
+                    <div class="flex flex-col space-y-5">
+                        <div class="flex items-start">
+                            <div class="w-2/3">
+                                <p class="font-bold">Latest advancements in AI technology</p>
+                                <p class="text-gray-600 text-sm">Discover the latest breakthroughs in AI and their potential impact on industries.</p>
+                            </div>
+                            <button 
+                                class="ml-auto text-blue-500 underline hover:text-blue-700"
+                                onclick="showDetails('technology-1')"
+                            >
+                                Read More
+                            </button>
                         </div>
                     </div>
-                    <div class="flex w-full pt-5">
-                        <div>
-                            <img src="https://placehold.co/300x200" alt="">
+                </div>
+        
+                <!-- Chủ đề: Design -->
+                <div id="design" class="post-category hidden">
+                    <h2 class="text-2xl font-semibold mb-4 border-b-2 border-blue-600">Design</h2>
+                    <div class="flex flex-col space-y-5">
+                        <div class="flex items-start">
+                            <div class="w-2/3">
+                                <p class="font-bold">Design tips for UI/UX designers</p>
+                                <p class="text-gray-600 text-sm">Best practices for creating intuitive and visually stunning interfaces.</p>
+                            </div>
+                            <button 
+                                class="ml-auto text-blue-500 underline hover:text-blue-700"
+                                onclick="showDetails('design-1')"
+                            >
+                                Read More
+                            </button>
                         </div>
-                        <div class="p-3">
-                            <nav class="text-blue-600">Start Up</nav>
-                            <p class="font-bold">
-                                Design tips for designers that cover everything you need.
-                            </p>
+                    </div>
+                </div>
+        
+                <!-- Chủ đề: Fashion -->
+                <div id="fashion" class="post-category hidden">
+                    <h2 class="text-2xl font-semibold mb-4 border-b-2 border-blue-600">Fashion</h2>
+                    <div class="flex flex-col space-y-5">
+                        <div class="flex items-start">
+                            <div class="w-2/3">
+                                <p class="font-bold">Latest fashion trends</p>
+                                <p class="text-gray-600 text-sm">Explore this year's most popular styles and clothing trends.</p>
+                            </div>
+                            <button 
+                                class="ml-auto text-blue-500 underline hover:text-blue-700"
+                                onclick="showDetails('fashion-1')"
+                            >
+                                Read More
+                            </button>
+                        </div>
+                    </div>
+                </div>
+        
+                <!-- Chủ đề: Food -->
+                <div id="food" class="post-category hidden">
+                    <h2 class="text-2xl font-semibold mb-4 border-b-2 border-blue-600">Food</h2>
+                    <div class="flex flex-col space-y-5">
+                        <div class="flex items-start">
+                            <div class="w-2/3">
+                                <p class="font-bold">Healthy meal ideas</p>
+                                <p class="text-gray-600 text-sm">Delicious recipes for a balanced diet.</p>
+                            </div>
+                            <button 
+                                class="ml-auto text-blue-500 underline hover:text-blue-700"
+                                onclick="showDetails('food-1')"
+                            >
+                                Read More
+                            </button>
+                        </div>
+                    </div>
+                </div>
+        
+                <!-- Chủ đề: Health -->
+                <div id="health" class="post-category hidden">
+                    <h2 class="text-2xl font-semibold mb-4 border-b-2 border-blue-600">Health</h2>
+                    <div class="flex flex-col space-y-5">
+                        <div class="flex items-start">
+                            <div class="w-2/3">
+                                <p class="font-bold">Mental wellness tips</p>
+                                <p class="text-gray-600 text-sm">Stay healthy with simple mindfulness techniques.</p>
+                            </div>
+                            <button 
+                                class="ml-auto text-blue-500 underline hover:text-blue-700"
+                                onclick="showDetails('health-1')"
+                            >
+                                Read More
+                            </button>
                         </div>
                     </div>
                 </div>
             </div>
         
-            <div class="w-1/2">
-                <img src="./assets/AI_robot.png" alt="Image" class="w-full h-full object-cover rounded-lg" />
-            </div>
-        </section>
-        <br><br><br>
+           <!-- Phần chi tiết bài viết -->
+<div id="post-details" class="w-full mt-10 p-5 bg-gray-100 rounded-lg hidden">
+    <button 
+        class="text-blue-600 hover:text-blue-800 font-bold mb-3"
+        onclick="closeDetails()"
+    >
+        Back to Posts
+    </button>
+    <div id="post-content"></div>
+</div>
+</section>
 
-        <section class="flex flex-col justify-center items-center">
+<script>
+   const detailsContent = {
+    'technology-1': `
+        <div class="flex items-center space-x-4">
+            <!-- Hình ảnh -->
+            <img src="./assets/technology.png" alt="Technology" class="max-w-60 h-a60 rounded-lg object-cover">
+            <!-- Nội dung -->
+            <div>
+                <h2 class="text-xl font-bold mb-2">Latest advancements in AI technology</h2>
+                <p>The world of AI is rapidly evolving, with breakthroughs in machine learning, neural networks, and robotics transforming industries across the globe. Learn about the latest advancements and how they're shaping the future of technology.</p>
+            </div>
+        </div>
+    `,
+    'design-1': `
+        <div class="flex items-center space-x-4">
+            <!-- Hình ảnh -->
+            <img src="./assets/design.png" alt="Design" class="max-w-60 h-a60 rounded-lg object-cover">
+            <!-- Nội dung -->
+            <div>
+                <h2 class="text-xl font-bold mb-2">Design tips for UI/UX designers</h2>
+                <p>Creating effective UI/UX involves understanding user needs, ensuring intuitive navigation, and crafting visually appealing designs. Here are some essential design tips for UI/UX designers to improve their projects.</p>
+            </div>
+        </div>
+    `,
+    'fashion-1': `
+        <div class="flex items-center space-x-4">
+            <!-- Hình ảnh -->
+              <img src="./assets/fashion.png" alt="Fashion" class="max-w-60 h-a60 rounded-lg object-cover">
+            <!-- Nội dung -->
+            <div>
+                <h2 class="text-xl font-bold mb-2">Latest fashion trends</h2>
+                <p>Explore the most popular fashion trends this year, from sustainable fashion to bold streetwear. Stay ahead of the curve with these style tips and tricks.</p>
+            </div>
+        </div>
+    `,
+    'food-1': `
+        <div class="flex items-center space-x-4">
+            <!-- Hình ảnh -->
+            <img src="./assets/food.png" alt="Food" class="max-w-60 h-a60 rounded-lg object-cover">
+            <!-- Nội dung -->
+            <div>
+                <h2 class="text-xl font-bold mb-2">Healthy meal ideas</h2>
+                <p>Discover healthy, delicious meal ideas that are both nutritious and easy to prepare. Whether you're looking for quick breakfasts or light dinners, these recipes will keep you feeling great.</p>
+            </div>
+        </div>
+    `,
+    'health-1': `
+        <div class="flex items-center space-x-4">
+            <!-- Hình ảnh -->
+           <img src="./assets/health.png" alt="Health" class="max-w-60 h-a60 rounded-lg object-cover">
+            <!-- Nội dung -->
+            <div>
+                <h2 class="text-xl font-bold mb-2">Mental wellness tips</h2>
+                <p>Learn how to maintain mental well-being through mindfulness, relaxation techniques, and healthy lifestyle choices. Taking care of your mind is just as important as your body.</p>
+            </div>
+        </div>
+    `
+};
+
+function filterPosts(category) {
+    document.querySelectorAll('.post-category').forEach(post => post.classList.add('hidden'));
+    document.getElementById(category).classList.remove('hidden');
+    closeDetails();
+}
+
+function showDetails(postId) {
+    document.getElementById('post-details').classList.remove('hidden');
+    document.getElementById('post-content').innerHTML = detailsContent[postId];
+}
+
+function closeDetails() {
+    document.getElementById('post-details').classList.add('hidden');
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+    filterPosts('technology');
+});
+
+</script>
+
+        <br><br><br><br>
+        <section id="contact" class="flex flex-col justify-center items-center">
             <h1 class="text-center text-3xl font-bold">List of Authors</h1>
             <br><br>
             <div class="flex justify-around items-center w-[70%]">
                 <div class="flex flex-col justify-center ml-2 rounded-[8px] items-center bg-slate-100 py-5 px-2">
                     <img src="./assets/lena.png" alt="" class="rounded-full w-[90%]">
                     <h2>Le Na</h2>
+
                     <div class="h-[1px] w-[10rem] bg-slate-400 my-3"></div>
+
                     <div>
-                        <a href="#" target="_blank" class="text-2xl hover:text-gray-300"><i class="fab fa-instagram"></i></a>
-                        <a href="#" target="_blank" class="text-2xl hover:text-gray-300"><i class="fab fa-facebook"></i></a>
+                        <a href="https://www.instagram.com/anel_1101/" target="_blank" class="text-2xl hover:text-gray-300"><i class="fab fa-instagram"></i></a>
+                        <a href="https://www.facebook.com/profile.php?id=100041569631166" target="_blank" class="text-2xl hover:text-gray-300"><i class="fab fa-facebook"></i></a>
                     </div>
+
                 </div>
                 <div class="flex flex-col justify-center ml-2 rounded-[8px] items-center bg-slate-100 py-5 px-2">
                     <img src="./assets/xuanthao.png" alt="" class="rounded-full w-[90%]">
                     <h2>Xuan Thao</h2>
+
                     <div class="h-[1px] w-[10rem] bg-slate-400 my-3"></div>
+
                     <div>
                         <a href="#" target="_blank" class="text-2xl hover:text-gray-300"><i class="fab fa-instagram"></i></a>
-                        <a href="#" target="_blank" class="text-2xl hover:text-gray-300"><i class="fab fa-facebook"></i></a>
+                        <a href="https://www.facebook.com/share/1BxSQ6NJ4Z/?mibextid=LQQJ4d" target="_blank" class="text-2xl hover:text-gray-300"><i class="fab fa-facebook"></i></a>
                     </div>
+
+                </div>
+                <div class="flex flex-col justify-center ml-2 rounded-[8px] items-center bg-slate-100 py-5 px-2">
+                    <img src="./assets/baongoc.png" alt="" class="rounded-full w-[90%]">
+                    <h2>Bao Ngoc</h2>
+
+                    <div class="h-[1px] w-[10rem] bg-slate-400 my-3"></div>
+
+                    <div>
+                        <a href="https://www.instagram.com/ng_oo_c/" target="_blank" class="text-2xl hover:text-gray-300"><i class="fab fa-instagram"></i></a>
+                        <a href="https://www.facebook.com/share/1AmktAN4oo/?mibextid=LQQJ4d" target="_blank" class="text-2xl hover:text-gray-300"><i class="fab fa-facebook"></i></a>
+                    </div>
+
                 </div>
             </div>
+
         </section>
 
+        </div>
         <br><br><br>
 
-        <footer class="flex justify-between items-center py-5">
-            <p> &copy; 2024, All Rights Reserved </p>
-            <p> Powered by AI Color Palette </p>
-        </footer>
-    </div>
-
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script>
-        function showChatbot() {
-            document.getElementById('chatbot-container').classList.remove('hidden');
-        }
-
-        // Đảm bảo gửi đúng field 'input_text' như định nghĩa trong QueryRequest của backend
-        async function sendMessage() {
-            const userInput = document.getElementById('user-input');
-            const userMessage = userInput.value;
-            const chatMessages = document.getElementById('chat-messages');
-
-            // Add user's message to chat
-            chatMessages.innerHTML += `<div class="text-right"><b>You: </b>${userMessage}</div>`;
-            userInput.value = '';
-
-            // Send user message to API
-            try {
-                const response = await fetch('http://localhost:8000/api/generate-color', { // Cập nhật endpoint phù hợp
-                    method: 'POST',
-                    headers: {
-                        'Content-Type': 'application/json',
-                    },
-                    body: JSON.stringify({ input_text: userMessage }), // Đúng format backend yêu cầu
-                });
-                const data = await response.json();
-
-                // Display the chatbot response
-                chatMessages.innerHTML += `<div class="text-left"><b>AI: </b>${data.result}</div>`;
-                chatMessages.scrollTop = chatMessages.scrollHeight;
-            } catch (error) {
-                chatMessages.innerHTML += `<div class="text-left text-red-500">Error: ${error.message}</div>`;
+        <section>
+            <footer class="bg-slate-900 text-white py-10">
+                <!-- Newsletter Section -->
+                <div class="flex flex-col items-center space-y-6">
+                    <div class="text-center">
+                        <p class="text-2xl font-medium whitespace-nowrap">
+                            Subscribe to our newsletter to get the latest updates and news!
+                        </p>
+                    </div>
+                    <div class="flex items-center">
+                        <input 
+                            type="email" 
+                            class="w-[20rem] text-white bg-slate-800 border p-2 px-4 rounded-lg border-white focus:outline-none focus:ring-2 focus:ring-blue-500" 
+                            placeholder="Enter your email" 
+                            aria-label="Email input"
+                        >
+                        <button 
+                            class="ml-3 text-white py-2 px-6 rounded-lg font-semibold transition transform hover:scale-105" 
+                            style="background: linear-gradient(90deg, rgba(68, 103, 255, 1), rgba(114, 65, 255, 1));"
+                        >
+                            Subscribe
+                        </button>
+                    </div>
+                </div>
+                
+            
+                <!-- Divider -->
+                <hr class="my-8 border-gray-700" />
+            
+                <!-- Footer Socials and Bottom -->
+                <div class="flex flex-col items-center space-y-6">
+                    <!-- Social Media Icons -->
+                    <div class="flex space-x-4 text-lg">
+                        <a href="#" aria-label="Facebook" class="hover:text-blue-500 transition duration-300">
+                            <i class="fab fa-facebook"></i>
+                        </a>
+                        <a href="#" aria-label="Twitter" class="hover:text-blue-500 transition duration-300">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#" aria-label="Instagram" class="hover:text-blue-500 transition duration-300">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#" aria-label="LinkedIn" class="hover:text-blue-500 transition duration-300">
+                            <i class="fab fa-linkedin"></i>
+                        </a>
+                    </div>
+            
+                    <!-- Footer Bottom -->
+                    <div class="text-center text-sm">
+                        <p>&copy; 2024 AI Color Palette Generator. Created by <a href="https://yourwebsite.com" class="hover:text-blue-500 font-medium">Team PaletteDes</a>.</p>
+                    </div>
+                </div>
+            </footer>
+            
+            <style>
+            /* Custom Focus Styles */
+            input:focus {
+                outline: none;
+                box-shadow: 0 0 10px rgba(114, 65, 255, 0.5);
             }
-}
+            
+            /* Icon Styling (if using Font Awesome) */
+            i {
+                transition: transform 0.3s ease-in-out;
+            }
+            
+            i:hover {
+                transform: scale(1.2);
+            }
+            </style>
+            
+        </section>
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        <script>
+            function showChatbot() {
+                document.getElementById('chatbot-container').classList.remove('hidden');
+            }
+    
+            // Đảm bảo gửi đúng field 'input_text' như định nghĩa trong QueryRequest của backend
+            async function sendMessage() {
+                const userInput = document.getElementById('user-input');
+                const userMessage = userInput.value;
+                const chatMessages = document.getElementById('chat-messages');
+    
+                // Add user's message to chat
+                chatMessages.innerHTML += `<div class="text-right"><b>You: </b>${userMessage}</div>`;
+                userInput.value = '';
+    
+                // Send user message to API
+                try {
+                    const response = await fetch('http://localhost:8000/api/generate-color', { // Cập nhật endpoint phù hợp
+                        method: 'POST',
+                        headers: {
+                            'Content-Type': 'application/json',
+                        },
+                        body: JSON.stringify({ input_text: userMessage }), // Đúng format backend yêu cầu
+                    });
+                    const data = await response.json();
+    
+                    // Display the chatbot response
+                    chatMessages.innerHTML += `<div class="text-left"><b>AI: </b>${data.result}</div>`;
+                    chatMessages.scrollTop = chatMessages.scrollHeight;
+                } catch (error) {
+                    chatMessages.innerHTML += `<div class="text-left text-red-500">Error: ${error.message}</div>`;
+                }
+    }
+    
+    
+        </script>
 
-
-    </script>
 </body>
 
 </html>
